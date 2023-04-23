@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(images/Blue\ Skies.jpg); */
+  background-color: skyblue;
+  /* overflow: hidden; */
+}
+
+.boxes {
+  position: relative;
+}
+
+.vertical-box {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  /* background-image: url(images/Maldives.jpg); */
+  background: #f953c6;
+  background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
+  background: linear-gradient(to right, #b91d73, #f953c6);
+
+  margin-left: 4rem;
+  z-index: 1;
+  /* overflow-y: hidden; */
+  border-radius: 5px;
+}
+
+.horizontal-box {
+  position: absolute;
+  width: 70vw;
+  height: 65vh;
+  background-color: white;
+  z-index: 2;
+  margin-left: 25vw;
+  margin-top: 20vh;
+  margin-right: 1rem;
+  /* overflow-x: hidden; */
+  border-radius: 5px;
+}
+
+/* Set position of the logo-profile container */
+.logo-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the logo */
+.logo {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  font-family: 'Caveat', cursive;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.profile {
+  margin-right: 1rem;
+}
+
+.profile svg {
+  height: 30px;
+  width: 30px;
+  fill: white;
+  margin: 1rem;
+}
+
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 10vw;
+  margin-left: 38vw;
+  margin-right: 20px;
+}
+
+.time {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bi,
+.bi-clock {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.timer-options {
+  list-style: none;
+  margin-left: 2rem;
+  padding: 0;
+  display: flex;
+}
+
+.timer-options li {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.watch {
+  font-size: 1.8rem;
+  margin: 0rem auto;
+  color: #ffd700;
+}
+
+.options {
+  height: 40vh;
+  margin-top: -2vh;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+.card-title {
+  /* color:  #000000; */
+  /* color: #cccccc; */
+  color: #ffd700;
+}
+
+.card-text {
+  color: #ffffff;
+}
+
+.card-text i {
+  color: #FFFF00;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow-y: hidden;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #283F4D;
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.given-text {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  color: black;
+  transition: all 0.125s ease 0s;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  /* word-spacing: 0.1rem; */
+}
+
+.given-text span {
+  /* padding-right: 1px; 
+  padding-left: 1px; */
+  /* padding: 0 1px; */
+  /* border-bottom: 2px solid transparent; */
+  /* transition: all 0.125s ease 0s; */
+  /* transition: color 2ms ease-in; */
+  height: 1.5em;
+}
+
+.given-text span.right {
+  color: #2ECC40;
+}
+
+.given-text span.wrong {
+  color: #FF4136;
+}
+
+.given-text span.notTyped {
+  opacity: 0.5;
+}
+
+.caret {
+  font-size: 1.5rem;
+  opacity: 1;
+  width: 2px;
+  height: 1.5em;
+  position: absolute;
+  background-color: #b91d73;
+  left: 20px;
+  /* transform-origin: top left;  */
+  transition: all 0.125s ease 0s;
+  margin: 0;
+  padding: 0;
+  animation: move-caret 1s infinite;
+}
+
+@keyframes move-caret {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
